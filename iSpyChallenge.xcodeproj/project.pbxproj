@@ -28,6 +28,8 @@
 		3E5D3276277D879D004D1516 /* RatingAndAssociatedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5D3275277D879D004D1516 /* RatingAndAssociatedUser.swift */; };
 		3E5D3278277E4FB5004D1516 /* URL+iSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5D3277277E4FB5004D1516 /* URL+iSpy.swift */; };
 		3E5D327A277E5450004D1516 /* DataController+iSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5D3279277E5450004D1516 /* DataController+iSpy.swift */; };
+		7F4FA2F3296DCF2E0051442D /* NearMeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4FA2F2296DCF2E0051442D /* NearMeTableViewController.swift */; };
+		7F4FA2F5296DCF490051442D /* NearMeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4FA2F4296DCF490051442D /* NearMeTableViewCell.swift */; };
 		7FFF396A296CEC8B0081964A /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFF3969296CEC8B0081964A /* LocationService.swift */; };
 		7FFF396D296CEDE90081964A /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 7FFF396C296CEDE90081964A /* Factory */; };
 		7FFF397D296D7F010081964A /* MockLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFF397C296D7F000081964A /* MockLocationService.swift */; };
@@ -101,6 +103,8 @@
 		3E5D3275277D879D004D1516 /* RatingAndAssociatedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingAndAssociatedUser.swift; sourceTree = "<group>"; };
 		3E5D3277277E4FB5004D1516 /* URL+iSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+iSpy.swift"; sourceTree = "<group>"; };
 		3E5D3279277E5450004D1516 /* DataController+iSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController+iSpy.swift"; sourceTree = "<group>"; };
+		7F4FA2F2296DCF2E0051442D /* NearMeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMeTableViewController.swift; sourceTree = "<group>"; };
+		7F4FA2F4296DCF490051442D /* NearMeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMeTableViewCell.swift; sourceTree = "<group>"; };
 		7FFF3969296CEC8B0081964A /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		7FFF3972296D7EC50081964A /* iSpyChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iSpyChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FFF397C296D7F000081964A /* MockLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationService.swift; sourceTree = "<group>"; };
@@ -203,6 +207,15 @@
 				3E5D3275277D879D004D1516 /* RatingAndAssociatedUser.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		7F4FA2F0296DCDB60051442D /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				7FFF397E296D96320081964A /* NearMeViewModel.swift */,
+				7FFF3980296D983C0081964A /* NearMeCellViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 		7FFF3968296CEC590081964A /* Services */ = {
@@ -317,9 +330,10 @@
 		E089E983263A0C010054543D /* Near Me */ = {
 			isa = PBXGroup;
 			children = (
+				7F4FA2F0296DCDB60051442D /* View Models */,
 				E089E98B263A0C630054543D /* NearMe.storyboard */,
-				7FFF397E296D96320081964A /* NearMeViewModel.swift */,
-				7FFF3980296D983C0081964A /* NearMeCellViewModel.swift */,
+				7F4FA2F2296DCF2E0051442D /* NearMeTableViewController.swift */,
+				7F4FA2F4296DCF490051442D /* NearMeTableViewCell.swift */,
 			);
 			path = "Near Me";
 			sourceTree = "<group>";
@@ -513,7 +527,9 @@
 				3E5D326E277A9D56004D1516 /* User.swift in Sources */,
 				968A15DD264219800017D10B /* ChallengeTableViewController.swift in Sources */,
 				3E5D327A277E5450004D1516 /* DataController+iSpy.swift in Sources */,
+				7F4FA2F3296DCF2E0051442D /* NearMeTableViewController.swift in Sources */,
 				3E5D3262277A9B5E004D1516 /* Challenge+iSpy.swift in Sources */,
+				7F4FA2F5296DCF490051442D /* NearMeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

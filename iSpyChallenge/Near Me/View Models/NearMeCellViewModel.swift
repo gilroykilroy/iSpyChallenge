@@ -16,6 +16,7 @@ struct NearMeCellViewModel: CustomDebugStringConvertible {
     var numWins: Int
     var averageRating: Double
     var distanceInMeters: Double
+    var photoImageName: String
     
     // Displayed data
     var numWinsString: String
@@ -31,6 +32,7 @@ struct NearMeCellViewModel: CustomDebugStringConvertible {
             user: \(user)
             numWins: \(numWins)
             distanceInMeters: \(distanceInMeters)
+            photoImageName: \(photoImageName)
             averageRating: \(averageRating)
             numWinsString: \(numWinsString)
             averageRatingString: \(averageRatingString)
@@ -58,6 +60,8 @@ struct NearMeCellViewModel: CustomDebugStringConvertible {
         averageRating = totalRating / Double(challenge.ratings.count)
         
         distanceInMeters = CLLocation(coordinate: currentLocation).distance(from: CLLocation(latitude: challenge.latitude, longitude: challenge.longitude))
+        
+        photoImageName = challenge.photoImageName
 
         // Displayed data
         // Assuming unlocalized english for this challenge
