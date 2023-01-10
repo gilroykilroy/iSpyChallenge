@@ -4,6 +4,7 @@
 //
 //
 
+import Factory
 import Foundation
 
 extension NSNotification.Name {
@@ -13,7 +14,7 @@ extension NSNotification.Name {
 }
 
 class DataController {
-    private let apiService: APIService
+    private let apiService: APIServiceProtocol
     
     private(set) var allUsers: [User] = [] {
         didSet {
@@ -24,7 +25,7 @@ class DataController {
     // A hack for this project -- assume that the first user is the current user
     private let currentUserIndex = 0
     
-    init(apiService: APIService) {
+    init(apiService: APIServiceProtocol) {
         self.apiService = apiService
     }
     
@@ -148,4 +149,9 @@ private extension DataController {
             .challenges
             .firstIndex(where: { $0.id == challengeId })
     }
+}
+
+// We really only need one copy of all the data
+extension Container {
+    static let dataController = Factory(scope: .singleton) { DataController(apiService: APIService()) }
 }

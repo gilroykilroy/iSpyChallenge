@@ -6,9 +6,27 @@
 
 import Foundation
 
+protocol APIServiceProtocol {
+    func getUsers(completion: @escaping ([APIUser]) -> Void)
+    
+    func getChallenges(completion: @escaping ([APIChallenge]) -> Void)
+    
+    func postChallenge(forUser userId: String,
+                       hint: String,
+                       location: APILocation,
+                       photoImageName: String,
+                       completion: @escaping (Result<APIChallenge, Error>) -> Void)
+    
+    func postMatch(fromUser userId: String,
+                   forChallenge challengeId: String,
+                   location: APILocation,
+                   photo: String,
+                   completion: @escaping (Result<APIMatch, Error>) -> Void)
+}
+
 /// This is a mock API service that just returns data from the JSONs bundled with this Xcode project.
 /// A real API service would make requests to a backend service to provide that data exposed in this interface.
-class APIService {
+class APIService: APIServiceProtocol {
     func getUsers(completion: @escaping ([APIUser]) -> Void) {
         let users: [APIUser]? = object(fromJSONNamed: "users")
         

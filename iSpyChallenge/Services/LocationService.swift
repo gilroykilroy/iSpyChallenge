@@ -62,5 +62,5 @@ extension LocationService: CLLocationManagerDelegate {
 
 // Register us as the default locationService
 extension Container {
-    static let locationService = Factory(scope: .singleton, factory: { LocationService() })
+    static let locationService = Factory(scope: .singleton) { LocationService() as LocationServiceProtocol }
 }

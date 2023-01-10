@@ -5,9 +5,10 @@
 
 import UIKit
 import CoreData
+import Factory
 
 class iSpyTabBarController: UITabBarController {
-    private let dataController = DataController(apiService: APIService())
+    @Injected(Container.dataController) private var dataController
     
     override func viewDidLoad() {
         super.viewDidLoad()

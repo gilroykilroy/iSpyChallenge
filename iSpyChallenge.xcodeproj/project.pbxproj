@@ -30,8 +30,15 @@
 		3E5D327A277E5450004D1516 /* DataController+iSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5D3279277E5450004D1516 /* DataController+iSpy.swift */; };
 		7FFF396A296CEC8B0081964A /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFF3969296CEC8B0081964A /* LocationService.swift */; };
 		7FFF396D296CEDE90081964A /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 7FFF396C296CEDE90081964A /* Factory */; };
-		7FFF3975296D7EC50081964A /* iSpyChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFF3974296D7EC50081964A /* iSpyChallengeTests.swift */; };
 		7FFF397D296D7F010081964A /* MockLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFF397C296D7F000081964A /* MockLocationService.swift */; };
+		7FFF397F296D96320081964A /* NearMeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFF397E296D96320081964A /* NearMeViewModel.swift */; };
+		7FFF3981296D983C0081964A /* NearMeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFF3980296D983C0081964A /* NearMeCellViewModel.swift */; };
+		7FFF3983296DA49B0081964A /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 7FFF3982296DA49B0081964A /* Localizable.stringsdict */; };
+		7FFF3985296DA90F0081964A /* NearMeCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFF3984296DA90F0081964A /* NearMeCellViewModelTests.swift */; };
+		7FFF3988296DA9A60081964A /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 7FFF3987296DA9A60081964A /* Nimble */; };
+		7FFF398A296DAC370081964A /* MockAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFF3989296DAC370081964A /* MockAPIService.swift */; };
+		7FFF398E296DB5FE0081964A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFF398D296DB5FE0081964A /* Utils.swift */; };
+		7FFF3990296DC0A70081964A /* NearMeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFF398F296DC0A70081964A /* NearMeViewModelTests.swift */; };
 		9660CD2F263B2D1E006B9352 /* transamerica_pyramid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9660CD27263B2D1E006B9352 /* transamerica_pyramid.jpg */; };
 		9660CD30263B2D1E006B9352 /* moscone-center-west.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9660CD28263B2D1E006B9352 /* moscone-center-west.jpg */; };
 		9660CD31263B2D1E006B9352 /* alcatraz-island.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9660CD29263B2D1E006B9352 /* alcatraz-island.jpg */; };
@@ -96,8 +103,14 @@
 		3E5D3279277E5450004D1516 /* DataController+iSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController+iSpy.swift"; sourceTree = "<group>"; };
 		7FFF3969296CEC8B0081964A /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		7FFF3972296D7EC50081964A /* iSpyChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iSpyChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7FFF3974296D7EC50081964A /* iSpyChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSpyChallengeTests.swift; sourceTree = "<group>"; };
 		7FFF397C296D7F000081964A /* MockLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationService.swift; sourceTree = "<group>"; };
+		7FFF397E296D96320081964A /* NearMeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMeViewModel.swift; sourceTree = "<group>"; };
+		7FFF3980296D983C0081964A /* NearMeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMeCellViewModel.swift; sourceTree = "<group>"; };
+		7FFF3982296DA49B0081964A /* Localizable.stringsdict */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; path = Localizable.stringsdict; sourceTree = "<group>"; };
+		7FFF3984296DA90F0081964A /* NearMeCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMeCellViewModelTests.swift; sourceTree = "<group>"; };
+		7FFF3989296DAC370081964A /* MockAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIService.swift; sourceTree = "<group>"; };
+		7FFF398D296DB5FE0081964A /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		7FFF398F296DC0A70081964A /* NearMeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMeViewModelTests.swift; sourceTree = "<group>"; };
 		9660CD27263B2D1E006B9352 /* transamerica_pyramid.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = transamerica_pyramid.jpg; sourceTree = "<group>"; };
 		9660CD28263B2D1E006B9352 /* moscone-center-west.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "moscone-center-west.jpg"; sourceTree = "<group>"; };
 		9660CD29263B2D1E006B9352 /* alcatraz-island.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "alcatraz-island.jpg"; sourceTree = "<group>"; };
@@ -135,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FFF3988296DA9A60081964A /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +216,9 @@
 		7FFF3973296D7EC50081964A /* iSpyChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				7FFF3974296D7EC50081964A /* iSpyChallengeTests.swift */,
+				7FFF398F296DC0A70081964A /* NearMeViewModelTests.swift */,
+				7FFF3984296DA90F0081964A /* NearMeCellViewModelTests.swift */,
+				7FFF398D296DB5FE0081964A /* Utils.swift */,
 				7FFF397B296D7ED30081964A /* Mocks */,
 			);
 			path = iSpyChallengeTests;
@@ -211,6 +227,7 @@
 		7FFF397B296D7ED30081964A /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				7FFF3989296DAC370081964A /* MockAPIService.swift */,
 				7FFF397C296D7F000081964A /* MockLocationService.swift */,
 			);
 			path = Mocks;
@@ -264,6 +281,7 @@
 				E07E587D263CAA570026F912 /* Extensions */,
 				7FFF3968296CEC590081964A /* Services */,
 				E0028790263A06EC00C65841 /* Assets.xcassets */,
+				7FFF3982296DA49B0081964A /* Localizable.stringsdict */,
 				E0028792263A06EC00C65841 /* LaunchScreen.storyboard */,
 				E002878D263A06EC00C65841 /* Main.storyboard */,
 				E089E97F263A0A0F0054543D /* iSpyTabBarController.swift */,
@@ -300,6 +318,8 @@
 			isa = PBXGroup;
 			children = (
 				E089E98B263A0C630054543D /* NearMe.storyboard */,
+				7FFF397E296D96320081964A /* NearMeViewModel.swift */,
+				7FFF3980296D983C0081964A /* NearMeCellViewModel.swift */,
 			);
 			path = "Near Me";
 			sourceTree = "<group>";
@@ -339,6 +359,9 @@
 				7FFF3977296D7EC50081964A /* PBXTargetDependency */,
 			);
 			name = iSpyChallengeTests;
+			packageProductDependencies = (
+				7FFF3987296DA9A60081964A /* Nimble */,
+			);
 			productName = iSpyChallengeTests;
 			productReference = 7FFF3972296D7EC50081964A /* iSpyChallengeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -392,6 +415,7 @@
 			mainGroup = E002877B263A06EC00C65841;
 			packageReferences = (
 				7FFF396B296CEDE90081964A /* XCRemoteSwiftPackageReference "Factory" */,
+				7FFF3986296DA9A60081964A /* XCRemoteSwiftPackageReference "Nimble" */,
 			);
 			productRefGroup = E0028785263A06EC00C65841 /* Products */;
 			projectDirPath = "";
@@ -435,6 +459,7 @@
 				E07E588B2641E6F20026F912 /* NewChallenge.png in Resources */,
 				E089E991263A0C8E0054543D /* DataBrowser.storyboard in Resources */,
 				E07E588C2641E6F20026F912 /* NearMe.png in Resources */,
+				7FFF3983296DA49B0081964A /* Localizable.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,8 +470,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FFF398A296DAC370081964A /* MockAPIService.swift in Sources */,
 				7FFF397D296D7F010081964A /* MockLocationService.swift in Sources */,
-				7FFF3975296D7EC50081964A /* iSpyChallengeTests.swift in Sources */,
+				7FFF3985296DA90F0081964A /* NearMeCellViewModelTests.swift in Sources */,
+				7FFF398E296DB5FE0081964A /* Utils.swift in Sources */,
+				7FFF3990296DC0A70081964A /* NearMeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,9 +502,11 @@
 				E089E980263A0A0F0054543D /* iSpyTabBarController.swift in Sources */,
 				3E5D3260277A980D004D1516 /* APIService.swift in Sources */,
 				96ABE80B2641E62C0045C456 /* UserTableViewController.swift in Sources */,
+				7FFF397F296D96320081964A /* NearMeViewModel.swift in Sources */,
 				3E5D3272277A9D6F004D1516 /* Match.swift in Sources */,
 				E002878A263A06EC00C65841 /* SceneDelegate.swift in Sources */,
 				7FFF396A296CEC8B0081964A /* LocationService.swift in Sources */,
+				7FFF3981296D983C0081964A /* NearMeCellViewModel.swift in Sources */,
 				3E5D325C277A96BD004D1516 /* APIRating.swift in Sources */,
 				968A15E0264221100017D10B /* MatchTableViewController.swift in Sources */,
 				3E5D3264277A9B6E004D1516 /* User+iSpy.swift in Sources */,
@@ -784,6 +814,14 @@
 				kind = branch;
 			};
 		};
+		7FFF3986296DA9A60081964A /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -791,6 +829,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7FFF396B296CEDE90081964A /* XCRemoteSwiftPackageReference "Factory" */;
 			productName = Factory;
+		};
+		7FFF3987296DA9A60081964A /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FFF3986296DA9A60081964A /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
