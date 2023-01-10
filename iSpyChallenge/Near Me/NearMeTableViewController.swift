@@ -6,6 +6,7 @@
 //
 
 import Combine
+import OSLog
 import UIKit
 
 class NearMeTableViewController: UITableViewController {
@@ -16,13 +17,28 @@ class NearMeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.separatorStyle = .none
-        
         let spinner = UIActivityIndicatorView(style: .large)
         spinner.startAnimating()
         tableView.backgroundView = spinner
         
         observeChanges()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "ShowChallangeDetail" else {
+            Logger().error("Not a seque we're looking for \(String(describing: segue.identifier))")
+            return
+        }
+        
+        guard let nearMeDetailViewController = segue.destination as? NearMeDetailViewController else {
+            preconditionFailure("Expecting a NearMeDetailViewController here")
+        }
+        
+        guard let imageName = viewModel.cellModels[safe: tableView.indexPathForSelectedRow?.row]?.photoImageName else {
+            preconditionFailure("No image name found")
+        }
+        
+        nearMeDetailViewController.imageName = imageName
     }
     
     private func observeChanges() {
