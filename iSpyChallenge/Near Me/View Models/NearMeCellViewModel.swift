@@ -57,7 +57,11 @@ struct NearMeCellViewModel: CustomDebugStringConvertible {
             partialResult += Double(rating.stars)
         }
         
-        averageRating = totalRating / Double(challenge.ratings.count)
+        if !challenge.ratings.isEmpty {
+            averageRating = totalRating / Double(challenge.ratings.count)
+        } else {
+            averageRating = 0.0
+        }
         
         distanceInMeters = CLLocation(coordinate: currentLocation).distance(from: CLLocation(latitude: challenge.latitude, longitude: challenge.longitude))
         
@@ -68,7 +72,11 @@ struct NearMeCellViewModel: CustomDebugStringConvertible {
         
         numWinsString = String.localizedStringWithFormat(NSLocalizedString("%d wins", comment: "Number of wins"), numWins)
         averageRatingString = String(format: "%.2f stars", averageRating)
+        
+        // Note we are assuming we are displaying the distance in meters, vs say, miles. This could be made into a
+        // user preference.
         distanceString = String(format: "%.2fm", distanceInMeters)
+        
         challengeCreatorString = String(format: "By: %@", user.username)
     }
 }
@@ -77,11 +85,5 @@ extension NearMeCellViewModel: Equatable {
     static func ==(lhs: NearMeCellViewModel, rhs: NearMeCellViewModel) -> Bool {
         // Assume they are the same if they have the same challenge ID
         lhs.challenge.id == rhs.challenge.id
-    }
-}
-
-extension CLLocation {
-    convenience init(coordinate: CLLocationCoordinate2D) {
-        self.init(latitude: coordinate.latitude, longitude: coordinate.longitude)
     }
 }

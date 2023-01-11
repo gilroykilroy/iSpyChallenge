@@ -5,6 +5,9 @@
 //  Created by Jeff Shulman on 1/10/23.
 //
 //  The view model for the NearMe list
+//  Note the current dataController assumes all the data will fit into memory. We will also assume that we have enough
+//  memory to fit all the NearMeCellViewModel's. It is beyond the scope of this exersize to re-implement the
+//  dataController to use something like CoreData to not load it all in memory.
 
 import Combine
 import CoreLocation

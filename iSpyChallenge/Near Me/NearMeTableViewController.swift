@@ -38,7 +38,7 @@ class NearMeTableViewController: UITableViewController {
             preconditionFailure("No image name found")
         }
         
-        nearMeDetailViewController.imageName = imageName
+        nearMeDetailViewController.setImageName(imageName)
     }
     
     private func observeChanges() {

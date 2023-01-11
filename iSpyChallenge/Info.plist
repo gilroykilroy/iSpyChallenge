@@ -62,5 +62,7 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We can update your challenge list with the closest to you first if you give us permission</string>
+	<key>NSCameraUsageDescription</key>
+	<string>We need permission to take a photo of this challenge item</string>
 </dict>
 </plist>

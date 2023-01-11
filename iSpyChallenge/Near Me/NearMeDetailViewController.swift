@@ -10,13 +10,28 @@ import UIKit
 class NearMeDetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
-    var imageName: String?
+    private var imageName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let imageName = imageName {
-            imageView.image = UIImage(named: imageName)
+            var theImage = UIImage(named: imageName)
+            
+            if theImage == nil {
+                // Could be stored in the documents directory
+                let fullFileURL = getDocumentsDirectory().appendingPathComponent(imageName)
+                let data = try? Data(contentsOf: fullFileURL)
+                if data != nil {
+                    theImage = UIImage(data: data!)
+                }
+            }
+            
+            imageView.image = theImage
         }
+    }
+    
+    func setImageName(_ imageName: String) {
+        self.imageName = imageName
     }
 }

@@ -1,12 +1,18 @@
 //
 //  Utils.swift
-//  iSpyChallengeTests
+//  iSpyChallenge
 //
 //  Created by Jeff Shulman on 1/10/23.
 //
+//  Misc handy stuff
 
 import CoreLocation
 import Foundation
+
+func getDocumentsDirectory() -> URL {
+    let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+    return paths[0]
+}
 
 extension Double {
     /// Rounds the double to decimal places value
@@ -15,6 +21,11 @@ extension Double {
         return (self * divisor).rounded() / divisor
     }
 }
+
+extension String: LocalizedError {
+    public var errorDescription: String? { return self }
+}
+
 
 extension CLLocation {
     convenience init(coordinate: CLLocationCoordinate2D) {

@@ -12,7 +12,7 @@ class MockLocationService: NSObject, LocationServiceProtocol, ObservableObject {
     static let defaultLatitude = 37.7904462
     static let defaultLongitude = -122.4011537
     
-    @Published private var currentLocation = CLLocationCoordinate2D(latitude: defaultLatitude, longitude: defaultLongitude)
+    @Published private(set) var currentLocation = CLLocationCoordinate2D(latitude: defaultLatitude, longitude: defaultLongitude)
     var currentLocationPublisher: Published<CLLocationCoordinate2D>.Publisher { $currentLocation }
     
     // Allow direct setting of a location
