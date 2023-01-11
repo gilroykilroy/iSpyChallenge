@@ -12,4 +12,10 @@ extension Rating {
                   stars: apiRating.value,
                   creatorID: apiRating.user)
     }
+    
+    func toAPIRating() -> APIRating {
+        APIRating(id: self.id,
+                  value: self.stars,
+                  user: self.creatorID)
+    }
 }

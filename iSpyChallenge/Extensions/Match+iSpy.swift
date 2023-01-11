@@ -15,4 +15,13 @@ extension Match {
                   verified: apiMatch.verified,
                   creatorID: apiMatch.user)
     }
+    
+    func toAPIMatch() -> APIMatch {
+        APIMatch(id: self.id,
+                 location: APILocation(latitude: self.latitude,
+                                       longitude: self.longitude),
+                 photo: self.photoImageName,
+                 verified: self.verified,
+                 user: self.creatorID)
+    }
 }

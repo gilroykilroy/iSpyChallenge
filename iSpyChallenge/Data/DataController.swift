@@ -2,7 +2,8 @@
 //  DataController.swift
 //  iSpyChallenge
 //
-//
+//  For expediency of this exersize we will persis the challenges list in UserDefaults under the "challanges" key. It will only
+//  be saved if the user actually adds a new challenge.
 
 import Factory
 import Foundation
@@ -25,6 +26,8 @@ class DataController {
     // A hack for this project -- assume that the first user is the current user
     private let currentUserIndex = 0
     
+    private let defaults = UserDefaults.standard
+    
     init(apiService: APIServiceProtocol) {
         self.apiService = apiService
     }
@@ -45,9 +48,21 @@ class DataController {
         }
         
         dispatchGroup.enter()
-        apiService.getChallenges {
-            apiChallenges = $0
-            dispatchGroup.leave()
+        // Try user defaults first
+        if let savedChallenges = defaults.object(forKey: "challenges") as? Data {
+            let decoder = JSONDecoder()
+            if let theSavedChallenges = try? decoder.decode([APIChallenge].self, from: savedChallenges) {
+                apiChallenges = theSavedChallenges
+                dispatchGroup.leave()
+            }
+        }
+        
+        if apiChallenges.isEmpty {
+            // Read them from json
+            apiService.getChallenges {
+                apiChallenges = $0
+                dispatchGroup.leave()
+            }
         }
         
         DispatchQueue.global(qos: .background).async {
@@ -75,6 +90,14 @@ class DataController {
             switch result {
             case .success(let apiChallenge):
                 self.appendChallenge(Challenge(apiChallenge: apiChallenge), forUser: currentUser.id)
+                
+                // Store all the challenges in user defaults
+                let apiChallenges = self.allChallenges.map { $0.toAPIChallenge() }
+                let encoder = JSONEncoder()
+                if let encodedChallenges = try? encoder.encode(apiChallenges) {
+                    self.defaults.set(encodedChallenges, forKey: "challenges")
+                }
+                
                 completion(true)
                 
             case .failure:
