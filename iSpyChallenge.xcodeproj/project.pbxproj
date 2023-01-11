@@ -29,6 +29,9 @@
 		3E5D3278277E4FB5004D1516 /* URL+iSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5D3277277E4FB5004D1516 /* URL+iSpy.swift */; };
 		3E5D327A277E5450004D1516 /* DataController+iSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5D3279277E5450004D1516 /* DataController+iSpy.swift */; };
 		7F3B11EE296E361500BC6AC6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3B11ED296E361500BC6AC6 /* Utils.swift */; };
+		7F3B11F0296E404000BC6AC6 /* MockImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3B11EF296E404000BC6AC6 /* MockImageService.swift */; };
+		7F3B11F1296E440D00BC6AC6 /* galvanize.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9660CD2B263B2D1E006B9352 /* galvanize.jpg */; };
+		7F3B11F3296E444100BC6AC6 /* NewChallengeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3B11F2296E444100BC6AC6 /* NewChallengeViewModelTests.swift */; };
 		7F436843296E150D0080A6D2 /* CreateChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F436842296E150D0080A6D2 /* CreateChallengeViewController.swift */; };
 		7F436846296E20FB0080A6D2 /* NewChallengeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F436845296E20FB0080A6D2 /* NewChallengeViewModel.swift */; };
 		7F436848296E2B160080A6D2 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F436847296E2B160080A6D2 /* ImageService.swift */; };
@@ -110,6 +113,8 @@
 		3E5D3277277E4FB5004D1516 /* URL+iSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+iSpy.swift"; sourceTree = "<group>"; };
 		3E5D3279277E5450004D1516 /* DataController+iSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController+iSpy.swift"; sourceTree = "<group>"; };
 		7F3B11ED296E361500BC6AC6 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		7F3B11EF296E404000BC6AC6 /* MockImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImageService.swift; sourceTree = "<group>"; };
+		7F3B11F2296E444100BC6AC6 /* NewChallengeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChallengeViewModelTests.swift; sourceTree = "<group>"; };
 		7F436842296E150D0080A6D2 /* CreateChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeViewController.swift; sourceTree = "<group>"; };
 		7F436845296E20FB0080A6D2 /* NewChallengeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChallengeViewModel.swift; sourceTree = "<group>"; };
 		7F436847296E2B160080A6D2 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
@@ -252,6 +257,7 @@
 			children = (
 				7FFF398F296DC0A70081964A /* NearMeViewModelTests.swift */,
 				7FFF3984296DA90F0081964A /* NearMeCellViewModelTests.swift */,
+				7F3B11F2296E444100BC6AC6 /* NewChallengeViewModelTests.swift */,
 				7FFF398D296DB5FE0081964A /* Utils.swift */,
 				7FFF397B296D7ED30081964A /* Mocks */,
 			);
@@ -263,6 +269,7 @@
 			children = (
 				7FFF3989296DAC370081964A /* MockAPIService.swift */,
 				7FFF397C296D7F000081964A /* MockLocationService.swift */,
+				7F3B11EF296E404000BC6AC6 /* MockImageService.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -472,6 +479,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F3B11F1296E440D00BC6AC6 /* galvanize.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +523,8 @@
 				7FFF3985296DA90F0081964A /* NearMeCellViewModelTests.swift in Sources */,
 				7FFF398E296DB5FE0081964A /* Utils.swift in Sources */,
 				7FFF3990296DC0A70081964A /* NearMeViewModelTests.swift in Sources */,
+				7F3B11F0296E404000BC6AC6 /* MockImageService.swift in Sources */,
+				7F3B11F3296E444100BC6AC6 /* NewChallengeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

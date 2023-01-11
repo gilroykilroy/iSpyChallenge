@@ -5,29 +5,20 @@
 //  Created by Jeff Shulman on 1/10/23.
 //
 
+import Factory
 import UIKit
 
 class NearMeDetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
+    @Injected(Container.imageService) private var imageService
     private var imageName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let imageName = imageName {
-            var theImage = UIImage(named: imageName)
-            
-            if theImage == nil {
-                // Could be stored in the documents directory
-                let fullFileURL = getDocumentsDirectory().appendingPathComponent(imageName)
-                let data = try? Data(contentsOf: fullFileURL)
-                if data != nil {
-                    theImage = UIImage(data: data!)
-                }
-            }
-            
-            imageView.image = theImage
+            imageView.image = imageService.loadImage(ofName: imageName)
         }
     }
     
